@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Learning-Home Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="mylogo.png">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.css"></script>
+        <script src="jquery-3.1.0.min.js"></script>
+        <style>
+            a:hover{
+                text-decoration: none;
+                color: red;
+            }
+        </style>
+    </head>
+        <body bgcolor="blue">
+        
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="img-rounded img-responsive" src="e.png" style=" height: 100px"> 
+                    </div>
+                    <div class="col-md-10">
+                       <span style="font-family:Algerian;font-size:70px;color:orangered;font-size: 70px">E-Learning</span>
+                    </div>
+                    
+                </div>  
+            </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <marquee scrollamount="10px" onmouseover="this.stop();" onmouseout="this.start();" style="cursor:pointer">Welcome to E-Learning Website Click here for <a href="index.html">Home Page</a></marquee>
+                        </div>
+                    </div>
+                </div>
+            <br><br>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <div class="thumbnail">
+                            <center><h3>Login Page</h3></center>
+                            <form action="userlogin.jsp" method="post" class="form-group">
+                                <div>
+                                    <label>Enter Username:</label>
+                                    <input type="text" name="username" class="form-control"/>
+                                </div>
+                                <div>
+                                    <label>Enter Password:</label>
+                                    <input type="password" name="password" class="form-control"/>
+                                    
+                                </div>
+                                <br>
+                                <div>
+                                    <center><button class="btn btn-default" type="submit">Submit</button>&nbsp;&nbsp;<button class="btn btn-default" type="reset">Clear</button></center>
+                                </div>
+                                <div>
+                                    <center><a href="reg.html">Click Here For Registration</a></center>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+               
+            </body>        
+</html>

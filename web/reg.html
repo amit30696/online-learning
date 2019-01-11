@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="mylogo.png">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="bootstrap.min.css"></script>
+        <script src="jquery-3.1.0.min.js"></script>
+        <style>
+            #a1:hover
+            {
+               text-decoration: none;
+               color: green;
+               font-size:15px;
+               cursor: pointer;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+            #sss,#ss,#s
+            {
+                margin-left: -25px;
+               position: relative;
+                top: 10px;
+            }
+          
+        </style>
+        <script>
+            function pass()
+            {
+                var result= true;
+                var x=document.getElementById('password').value;
+                var pat1=/[0-9]/;
+                var pat2=/[A-Z]/;
+                var pat3=/[a-z]/;
+                var pat4=/[!,@,#,$,%,^,&,*,(,),_]/;
+                var result1=x.match(pat1);
+                var result2=x.match(pat2);
+                var result3=x.match(pat3);
+                var result4=x.match(pat4);
+                
+                if(result1==null || result2==null || result3==null || result4==null)
+                {
+                    document.getElementById('sss').innerHTML="<small style='color:red'>Weak Password!</small>";
+                    result=false;
+                    return (result);
+                }
+                else
+                  {
+                    document.getElementById('sss').innerHTML="<small style='color:green'>Strong Password</small>";
+                  }
+              
+            }
+            function conpass()
+            {
+                var result1=true;
+                var x1=document.getElementById('password').value;
+                var conpassw=document.getElementById('conpassword').value;
+                if(x1!=conpassw)
+                {
+                    result1=false;
+                    document.getElementById('s').innerHTML="<small style='color:red'>Password not match !</small>";
+                    return (result1);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            
+            
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="img-rounded img-responsive" src="e.png" style=" height: 100px"> 
+                    </div>
+                    <div class="col-md-10">
+                       <span class="h1" style="font-family:Algerian;font-size:70px;color:orangered;font-size: 70px">E-Learning</span>
+                    </div>
+                    
+                </div>  
+            
+            <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <marquee scrollamount="10px" onmouseover="this.stop();" onmouseout="this.start();" style="cursor:pointer">Welcome to E-Learning Website Click Here For<a href="login.html" title="click for login"> Login</a></marquee>
+                        </div>
+                    </div>
+                </div>
+            <br><br>
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6 ">
+                    <div class="thumbnail" style="background-color:honeydew">
+                        <center><h2 style="color:gold">Registration Page</h2></center>
+                        <form action="reg.jsp" method="post" class="form-group" onsubmit="return conpass()" style="width:600px;margin-left:60px">
+                            <div>
+                                <label>First Name</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="text" name="firstname" maxlength="20" class="form-control" required/></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                                </div>
+                            </div>
+                             <div>
+                                <label>Last Name</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="text" name="lastname" class="form-control"/></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                            </div>
+                             </div>
+                            <div>
+                                <label>Father Name</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="text" name="fname" class="form-control " required/></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                            </div>
+                            </div>
+                             <div>
+                                <label>Username</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="text" name="username" class="form-control" required/></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <label>Gender</label>&nbsp;
+                                <input type="radio" value="Male" name="gender" class="form-inline"/>Male
+                                &nbsp;<input type="radio" value="Female" name="gender" class="form-inline" />Female
+                            </div>
+                            <br>
+                                <div>
+                                    <label>Date of Birth</label>&nbsp;
+                                    <div class="row">
+                                        <div class="col-md-9"><input type="date" name="dob"style="width:available" class="form-control" required/></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                                    </div>
+                                </div>
+                            
+                            <div>
+                                <label>Email_Id</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="email" name="email" class="form-control " required/></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label>Mobile Number</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="number" name="mo" class="form-control " required/></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                                </div>
+                            </div>
+                            <div>
+                                <label>Address</label>
+                                <div class="row">
+                                <div class="col-md-9"><textarea name="address" class="form-control" required></textarea></div><div class="col-md-3"><span id="ss" style="color:red;">*</span></div>
+                            </div>
+                            </div>
+                            <div>
+                                <label>Password</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="password" id="password"  oninput="return pass()"name="password" class="form-control " required/></div><div class="col-md-3"><span id="sss" style="color:red;">*</span></div>
+                                </div>
+                                </div>
+                            <div>
+                                <label>Conform Password</label>
+                                <div class="row">
+                                    <div class="col-md-9"><input type="password" id="conpassword" name="conpassword" class="form-control " required/></div><div class="col-md-3"><span id="s" style="color:red;">*</span></div>
+                                </div>
+                                </div>
+                            
+                            <br/><br/>
+                            
+                            <div style=" margin-left: 200px;">
+                                   <button class="btn btn-success" type="submit">Submit</button>&nbsp;&nbsp;<button class="btn btn-danger" type="reset">Clear</button>
+                                </div>
+                            
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3" >
+                    <a href="login.html" id="a1"><span style="padding-left:150px;"title="click for login"><label>Click here for Login</label></span></a>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>
